@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;500&display=swap');
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  margin: 0;
+}
+
+/* Styles for list items and anchor tags */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Left panel styles */
+#left-panel {
+  background-color: #f7f2f2;
+  width: 200px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  overflow-y: auto;
+  border-right: 1px solid #ccc;
+}
+
+/* Button styles */
+.openNav,
+.closebtn {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Content section styles */
+.content-section {
+  display: none;
+  padding: 0;
+}
+
+.active {
+  display: block;
+}
+
+/* Styling for left panel buttons */
+.panel-button {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #000;
+  transition: background-color 0.3s;
+}
+
+.panel-button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: rgba(253, 4, 137, 0.959);
+}
+
+/* Styling for content area */
+#content {
+  margin-left:200px; /* Adjust this value to match the width of the left panel */
+  padding: 10px;
+  transition: margin-left 0.5s;
+}
+
+/* Styling for content sections */
+.content-section {
+  display: none;
+}
+
+/* Styling for active content section */
+.content-section.active {
+  display: block;
+}
+
+/* Open menu button */
+.openNav {
+  display: none;
+  font-size: 25px;
+  position: relative;
+  left: 0.7rem;
+}
+
+/* Close button */
+.closebtn {
+  font-size: 35px;
+  position: relative;
+  left: 11rem;
+}
+
+.closebtn:hover {
+  color: red;
+}
+
+/* Menu text hidden */
+.invisible {
+  display: none;
+}
+
+/* Media queries for different screen sizes */
+
+/* Small devices (up to 576px) */
+@media (max-width: 576px) {
+  #left-panel {
+    width: 100%;
+    position: static;
+    height: auto;
+    border-right: none;
+    overflow-y: visible;
+  }
+
+  #content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .openNav {
+    display: block;
+  }
+
+  .closebtn {
+    display: none;
+  }
+
+  .panel-button .menutext {
+    display: none;
+  }
+}
+
+/* Medium and large devices */
+@media (min-width: 577px) {
+  /* Adjust the width and positioning of the left panel as needed */
+  #left-panel {
+    width: 210px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    overflow-y: auto;
+    border-right: 1px solid #ccc;
+  }
+
+  /* Adjust the margin-left value to match the width of the left panel */
+  #content {
+    margin-left: 210px;
+    padding: 20px;
+  }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Left Panel Navigation</title>  
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./fontAwsome/css/all.css">
+    
+</head>
+<body>
+    <ul id="left-panel" class="sidenav">
+        <li><a class="openNav" onclick="openNav()">&#9776;</a></li>
+        <li><a class="closebtn" onclick="closeNav()">&times;</a></li>
+        <li><a class="panel-button active" onclick="showContent('home-section')"><i class="fa-solid fa-house"></i> <span class="menutext">Home</span></a></li>
+        <li><a class="panel-button" onclick="showContent('contact-section')"><i class='fas fa-address-card'></i> <span class="menutext">Contact</span></a></li>
+        <li><a class="panel-button" onclick="showContent('info-section')"><i class="fa-solid fa-circle-info"></i>    <span class="menutext">Information</span></a></li>
+        <li><a class="panel-button" onclick="showContent('guide-section')"><i class="fa-brands fa-guilded"></i>  <span class="menutext">Guide</span></a></li>
+    </ul>
+    
+    
+    <div id="content">
+      
+        <div id="home-section" class="content-section active">
+            <h2>Home</h2>
+            <p>Welcome to the home section!</p>
+        </div>
+        <div id="contact-section" class="content-section">
+            <h2>Contact</h2>
+            <p>Contact information goes here...</p>
+        </div>
+        <div id="info-section" class="content-section">
+            <h2>Information</h2>
+            <p>Additional information goes here...</p>
+        </div>
+        <div id="guide-section" class="content-section">
+            <h2>Guide</h2>
+            <p>Guide information goes here...</p>
+        </div>
+    </div> 
+    <script src="script.js"></script>
+    <script src="./fontAwsome/js/all.js"></script>
+</body>
+</html>
